@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="style/style.css" type="text/css"/>
+    <link rel="stylesheet" href="style/mobile.css" type="text/css"/>
+    <title>Акватерапия RitmStyle</title>
+</head>
+    <body>
+        <div class="wrapper _container">
+            <header class="header">
+                    <a href="#" class="header_logo"><img class="logo" src="img/Group 1.svg" alt="logo RitmStyle"></a>
+                <nav class="menu">
+                    <ul class="menu_item">
+                        <li class="menu-item-head"><a href="index.html" class="menu_active">Главная</a></li>
+                        <li class="menu-item-head"><a href="new session.html" class="menu_link">Сеансы</a></li>
+                        <li class="menu-item-head"><a href="news.html" class="menu_link">Новости</a></li>
+                        <li class="menu-item-head"><a href="blog.html" class="menu_link">Блог</a></li>
+                    </ul>
+                </nav>
+                  <a href="new session.html" class="button-header">Запись на сеанс</a>
+            </header>
+            <main class="container">
+                <div class="preview-img">
+                    <a href="#"><img src="img/first-screen.svg" alt="header picture" style="width:100%;">
+                        <div class="h2-preview-img">Укрепление здоровья</div>
+                        <div class="h1-preview-img">Акватерапия RitmStyle</div>
+                    </a>
+                </div>
+                <h2 class="h2"> <img class="blue_leaf-left" href="#" src="img/Rectangle 25.png">Отзывы<img class="blue_leaf-right" href="#" src="img/Rectangle 26.png"></h2>
+                <div class="feedback_section"> 
+                    <div class="form_feedback">
+                        <div class="form_feedback_content">
+                            <h3 class="name_feedback">Кира Иванова</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus diam risus morbinulla dictum.
+                                Urna mi orci gravida placerat amet, eu, aliquet facilisis aliquet.
+                                Dolor praesent nam ornare fringilla enim nibh donec sit imperdiet.
+                                Amet, diam duis eu sit et. </p>
+                                <p>Volutpat vestibulum a lectus sed blandit.
+                                Venenatis urna mattis eu enim molestie iaculis et aliquet. Velit in pellentesque
+                                vestibulum phasellus orci. Fermentum sed phasellus aliquam nulla non aenean.
+                                Quisque id nunc, mauris potenti a massa. Fermentum at elit, convallis leo dolor aliquet id elementum.
+                                Ullamcorper sociis et cum bibendum in egestas. Diam, urna, sed tempus mollis aliquam elit.
+                                Facilisi nam nulla pulvinar mauris vel lacinia venenatis</p>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="h2"><img class="blue_leaf-left" href="#" src="img/Rectangle 25.png">Стоимость сеансов<img class="blue_leaf-right" href="#" src="img/Rectangle 26.png"></h2>
+                <div class="price-list _container-min">
+                    <div class="subscription">
+                        <div class="subscription-list">
+                            <ul>
+                                <li><img class="blue_leaf" href="#" src="img/Rectangle 25.png">RitmStyle с погружением</li>
+                                <li><img class="blue_leaf" href="#" src="img/Rectangle 25.png">Абонемент на RitmStyle</li>
+                                <li><img class="blue_leaf" href="#" src="img/Rectangle 25.png">RitmStyle для пар</li>
+                                <li><img class="blue_leaf" href="#" src="img/Rectangle 25.png">RitmStyle для беременных</li>
+                                <li><img class="blue_leaf" href="#" src="img/Rectangle 25.png">RitmStyle +  фотосессия</li>
+                            </ul>
+                        </div>
+                        <div class="subscription-list-price">
+                            <ul>
+                                <li>1000р.</li>
+                                <li>5500р.</li>
+                                <li>6000р.</li>
+                                <li>13500р.</li>
+                                <li>11000р.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-section">
+                         <img href="#" src="img/card.svg" alt="logo RitmStyle"> 
+                         <p>Подарочный сертификат</p>
+                    </div>
+                </div>
+                <div class="block_address _container">
+                    <div id="map" class="map"></div>
+                    <script>
+                        ymaps.ready(init);
+                        
+                        function init() {
+                            var map = new ymaps.Map('map', {
+                            center: [59.93, 30.30],
+                            zoom: 12,
+                            controls: ['zoomControl'],
+                            behaviors: ['drag']
+                        });
+                    
+                        var placemark = new ymaps.Placemark([59.96, 30.29], {
+                            hintContent: "<b>Ул. Набережная д. 3, ТРК “Центр”",
+                            balloonContent: [
+                                '<img class="yd" src ="img/your design.png">'
+                            ].join('')
+                        });
+                    
+                        map.geoObjects.add(placemark);
+                        } 
+                    </script>
+                    <div class="address">
+                    <div class="block_address_WorkClass">
+                        <div class="form_address_WorkClass">
+                            <h3 class="name_feedback">Бассейн WorkClass</h3>
+                            <p><img class="icon_location" href="#" src="img/carbon_location-filled.png">Невский 140</p>
+                            <p><img class="icon_metro" href="#" src="img/Spb_metro_logo 1.png">м. Спасская</p>
+                            <p><img class="icon_calendar" href="#" src="img/bi_calendar-week-fill.png">Запись по договоренности</p>
+                            <a href="new session.html" class="button-form_address">Запись на сеанс</a>
+                        </div>
+                    </div>
+
+                        <div class="block_address_Gorohovaya">
+                            <div class="form_address_Gorohovaya">
+                                <h3 class="name_feedback">Бассейн WorkClass</h3>
+                                <p><img class="icon_location" href="#" src="img/carbon_location-filled.png">Невский 140</p>
+                                <p><img class="icon_metro" href="#" src="img/Spb_metro_logo 1.png">м. Спасская</p>
+                                <p><img class="icon_calendar" href="#" src="img/bi_calendar-week-fill.png">Запись по договоренности</p>
+                                <a href="new session.html" class="button-form_address">Запись на сеанс</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer class="footer _container">
+            <div class="content_footer">
+                <p> © 2018-2022 RitmStyle</p>
+                <p>Сделано d-e-n.info</p>
+            </div>         
+        </footer>
+    </body>
+</html>
